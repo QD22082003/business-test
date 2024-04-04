@@ -1,0 +1,92 @@
+.featured-content{
+    height: 384px;
+    margin-top: 0;
+    width: 100%;
+    position: relative;
+    background-image: url("../images/team.jpg");
+    background-size: cover;
+    background-position: center calc(-150px );
+    text-align: center;
+    display: flex;
+    @include media (xlarge) {
+        background-size: cover;
+        background-position: center calc(-5px );
+    }
+
+    &__ctn{
+        margin-top: auto;
+        margin-bottom: auto;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr); // Chia thành 4 hàng bằng nhau
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title{
+        grid-row: span 1;
+        color: $color-white;
+        font-size: 30px; 
+        font-weight: normal;
+        z-index: 1;
+        margin:  0 0 16px 0;
+        @include media (xlarge) {
+            top: 70px;
+        }
+        @include media(medium){
+            font-size: 24px;
+            margin: 0;
+            // padding-right: $spacer-2;
+            // padding-left: $spacer-2;
+        }
+    }
+
+    &__description{
+        grid-row: span 1;
+        max-width: 38rem;
+        line-height: 1.625rem;
+        color: rgb(255 255 255 / 0.8) !important;
+        font-size: 16px;
+        z-index: 1;
+        line-height: 1.625rem;
+        @include auto-margin-left-right();
+        @include media (xlarge) {
+            width: 100%;
+        }
+        @include media(small){
+            width: auto;
+            // padding-right: $spacer-2;
+            // padding-left: $spacer-2;
+        }
+    }
+
+    &__circle {
+        grid-row: span 2;
+        width: 80px;
+        height: 80px;
+        background-color: $color-white; 
+        border-radius: 50%;
+        z-index: 1;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        @include auto-margin-left-right();
+    }
+
+    &__icon{
+        font-size: 30px;
+        color: $color-hover-btn;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color:#0F172AB3;
+        z-index: 0;
+    }
+}

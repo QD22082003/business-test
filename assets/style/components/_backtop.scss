@@ -1,0 +1,24 @@
+.backtop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 36px;
+    width: 36px;
+    background-color: $color-soft-blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    i{
+        color: $color-white;
+        font-size: 10px;
+    }
+    
+}
+
+.backtop.show {
+    opacity: 1;
+}

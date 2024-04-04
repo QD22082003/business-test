@@ -1,0 +1,55 @@
+@mixin custom-grid() {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto; 
+    gap: $spacer-7;
+    
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@mixin auto-margin-left-right {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin media($breakpoint) {
+  @if $breakpoint == xxxlarge {
+    @media (max-width: 1536px) {
+      @content;
+    }
+  } @else if $breakpoint == xxlarge {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  } @else if $breakpoint == xlarge {
+    @media (max-width: 1120px) {
+      @content;
+    }
+  } @else if $breakpoint == large {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $breakpoint ==  medium{
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == small {
+    @media (max-width: 640px) {
+      @content;
+    }
+  } @else if $breakpoint == xsmall {
+    @media (max-width: 540px) {
+      @content;
+    }
+  }
+}
+
+
+

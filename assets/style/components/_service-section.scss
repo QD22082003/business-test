@@ -1,0 +1,135 @@
+.service-section{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    margin-top: $spacer-13;
+    margin-bottom: $spacer-13;
+    @include media (xlarge){
+        height: auto;
+        width: 100%;
+    }
+    width: 100%;
+
+    &__top{
+        height: auto;
+        text-align: center;
+        padding-bottom: $spacer-7;
+    }
+
+    &__bot{
+        margin-top: $spacer-7;
+        height: auto;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: $spacer-7;
+        @include media(medium){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.service-section-top{
+    &__subtitle{
+        font-weight: 700;
+        color: $color-soft-blue; 
+        font-size: 0.875rem;
+        margin: 0 0 $spacer-1 0;
+    }
+
+    &__title{
+        font-weight: 600;
+        font-size: 1.875rem; 
+        margin:0 0 $spacer-3 0;
+        @include media(small){
+            font-size: 24px; 
+        }
+    }
+
+    &__description{
+        max-width: 36rem;
+        line-height: 1.5;
+        font-size: 16px;
+        color: $color-pale-blue-gray;
+        padding: 0;
+        // @include flex-margin-left-right();
+        @include media (xlarge){
+            width: 100%;
+        }
+    }
+}
+
+.service-section-bot{
+    &__ctn{
+        height: auto;
+        text-align: center;
+        @include media(small){
+            width: 100%;
+        }
+        grid-column:1 span;
+    }
+    
+    &__ctn-icon{
+        &:hover{
+            i{
+                color: $color-hover-btn;
+            }
+            h4{
+                color: $color-hover-btn;
+            }
+        }
+    }
+
+    &__title{
+        font-size: 1.25rem;
+        color: $color-midnight-blue;
+        font-weight: 600;
+        margin: $spacer-4 0 0 0;
+    }
+
+    &__description{
+        margin-top: $spacer-3;
+        color: $color-light-slate-gray;
+        line-height: 1.65;
+        font-size: 1rem;
+    }
+
+    &__read-more {
+        @include auto-margin-left-right;
+        margin-top: $spacer-3;
+        width: max-content;
+        font-size: 1rem;
+        color: $color-midnight-blue;
+        font-weight: 600;
+        cursor: pointer;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px; 
+            background: linear-gradient(to right, $color-soft-blue, $color-soft-blue, $color-soft-blue);
+            transition: width 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+    
+        &:hover::before {
+            width: 100%;
+            color: $color-soft-blue;
+        }
+        &:hover{
+            color: $color-soft-blue;
+            .custom-section-bot__icon{
+                color: $color-soft-blue;
+            }
+            .custom-section-bot__title{
+                color: $color-soft-blue;
+            }
+        }
+    }
+}

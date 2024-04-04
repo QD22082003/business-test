@@ -1,0 +1,66 @@
+.container {
+    max-width: 1536px;
+    padding-right: 13rem;
+    padding-left: 13rem;
+    margin-right: auto;
+    margin-left: auto;
+    @include media (xxxlarge){
+        max-width: 1280px;
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+    @include media (xxlarge){
+        max-width: 1024px;
+        padding-right: 45px;
+        padding-left: 45px; 
+    }
+    @include media (large){
+        max-width: 768px;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    @include media (medium) {
+        max-width: 640px;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    @include media (small) {
+        max-width: 540px;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+    @include media (xsmall){
+        width: 100%;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+}
+
+.container-slider{
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    @include media (xxxlarge) {
+        width: 1120px;
+    }
+    @include media (xxlarge) {
+        width: 934px;
+    }
+    @include media (large) {
+        width: 736px;
+    }
+    @include media (medium) {
+        width: 608px;
+    }
+    @include media (small) {
+        width: 516px;
+        // padding-right: 12px;
+        // padding-left: 12px;
+    }
+    @include media (xsmall) {
+        // box-sizing: content-box;
+        width: 100%;
+        padding-right: 12px !important;
+        padding-left: 12px !important;
+    }
+}
